@@ -1,4 +1,4 @@
-name: Windows x86
+name: Windows amd64
 on: workflow_dispatch
 jobs:
   windows:
