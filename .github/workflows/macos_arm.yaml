@@ -4,11 +4,6 @@ jobs:
   generate:
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: "23"
-          distribution: "adopt"
+      - uses: stefanzweifel/git-auto-commit-action@v4
       - run: curl -s "https://get.sdkman.io" | bash
       - run: source "/Users/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x mac_arm.sh && ./mac_arm.sh
