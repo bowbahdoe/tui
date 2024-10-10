@@ -1,5 +1,5 @@
     jextract \
-        --output src/ \
+        --output src/main/java \
         --target-package dev.mccue.tui.os.linux.x86 \
         --include-struct termios \
         --include-function ioctl \

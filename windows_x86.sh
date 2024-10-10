@@ -1,5 +1,5 @@
 ./jextract-22/bin/jextract \
-        --output src/ \
+        --output src/main/java \
         --target-package dev.mccue.tui.os.windows.x86 \
         --include-function GetConsoleMode \
         --include-function SetConsoleMode \
