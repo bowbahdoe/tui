@@ -1,6 +1,6 @@
 jextract \
         --output src/ \
-        --target-package dev.mccue.tui.os.mac.x86 \
+        --target-package dev.mccue.tui.os.mac.arm \
         --include-struct termios \
         --include-function ioctl \
         --include-function tcgetattr \
