@@ -1,4 +1,4 @@
-name: MacOS ARM
+name: Ubuntu x86
 on: workflow_dispatch
 jobs:
   generate:
@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: curl -s "https://get.sdkman.io" | bash
-      - run: source "/Users/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x ubuntu_x86.sh && ./ubuntu_x86.sh
+      - run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x ubuntu_x86.sh && ./ubuntu_x86.sh
       - uses: stefanzweifel/git-auto-commit-action@v4
