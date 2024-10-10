@@ -1,23 +1,6 @@
 name: Generate Native Code
 on: workflow_dispatch
 jobs:
-  macos:
-    runs-on: macos-14
-    steps:
-      - uses: actions/checkout@v4
-      - run: curl -s "https://get.sdkman.io" | bash
-      - run: source "/Users/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x mac_arm.sh && ./mac_arm.sh
-      - uses: stefanzweifel/git-auto-commit-action@v4
-
-  ubuntu:
-    runs-on: ubuntu-latest
-    needs: macos
-    steps:
-      - uses: actions/checkout@v4
-      - run: curl -s "https://get.sdkman.io" | bash
-      - run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x ubuntu_x86.sh && ./ubuntu_x86.sh
-      - uses: stefanzweifel/git-auto-commit-action@v4
-
   windows:
     runs-on: windows-latest
     needs: ubuntu
