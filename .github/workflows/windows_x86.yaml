@@ -1,4 +1,4 @@
-name: Generate Native Code
+name: Windows x86
 on: workflow_dispatch
 jobs:
   windows:
