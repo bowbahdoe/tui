@@ -1,7 +1,5 @@
 package dev.mccue.tui;
 
-import java.util.Locale;
-
 final class Terminal {
     private static final TerminalOperations ops;
 
@@ -10,13 +8,13 @@ final class Terminal {
         var arch = System.getProperty("os.arch");
 
         if (os.toLowerCase().startsWith("win") && arch.equals("amd64")) {
-            ops = new TerminalOperations_Windows_x86();
+            ops = new TerminalOperations_Windows_amd64();
         }
         else if (os.toLowerCase().startsWith("mac") && arch.equals("aarch64")) {
-            ops = new TerminalOperations_Mac_Arm();
+            ops = new TerminalOperations_Mac_aarch64();
         }
         else if (os.toLowerCase().startsWith("linux") && arch.equals("amd64")) {
-            ops = new TerminalOperations_Linux_x86();
+            ops = new TerminalOperations_Linux_amd64();
         }
         else {
             throw new ExceptionInInitializerError("Unsupported os/arch: os=" + os + ", arch=" + arch);

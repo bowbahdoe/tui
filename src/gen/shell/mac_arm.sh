@@ -1,6 +1,6 @@
 jextract \
         --output src/main/java \
-        --target-package dev.mccue.tui.os.mac.arm \
+        --target-package dev.mccue.tui.os.mac.aarch64 \
         --include-struct termios \
         --include-function ioctl \
         --include-function tcgetattr \
@@ -77,4 +77,4 @@ jextract \
       	--include-constant CS8 \
       	--include-constant VMIN \
       	--include-constant VTIME \
-        headers/ioctl.h
+        src/gen/c/ioctl.h

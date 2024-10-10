@@ -4,7 +4,7 @@ import dev.mccue.tui.os.windows.x86.*;
 
 import java.lang.foreign.Arena;
 
-final class TerminalOperations_Windows_x86 extends TerminalOperations {
+final class TerminalOperations_Windows_amd64 extends TerminalOperations {
     @Override
     boolean isTerminal(int fd) {
         var handle = windows_h.GetStdHandle(windows_h.STD_OUTPUT_HANDLE());

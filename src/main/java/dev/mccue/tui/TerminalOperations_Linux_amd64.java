@@ -1,16 +1,16 @@
 package dev.mccue.tui;
 
-import dev.mccue.tui.os.mac.arm.*;
+import dev.mccue.tui.os.linux.x86.*;
 
 import java.lang.foreign.Arena;
 
-final class TerminalOperations_Mac_Arm extends TerminalOperations {
+final class TerminalOperations_Linux_amd64 extends TerminalOperations {
     @Override
     boolean isTerminal(int fd) {
         var invoker = ioctl_h.ioctl.makeInvoker(termios.layout());
         try (var arena = Arena.ofConfined()) {
             var t = termios.allocate(arena);
-            var result = invoker.apply(fd, ioctl_h.TIOCGETA(), t);
+            var result = invoker.apply(fd, ioctl_h.TCGETS(), t);
             return result == 0;
         }
     }
@@ -20,7 +20,7 @@ final class TerminalOperations_Mac_Arm extends TerminalOperations {
         try (var arena = Arena.ofConfined()) {
             var t = termios.allocate(arena);
             var invoker = ioctl_h.ioctl.makeInvoker(termios.layout());
-            invoker.apply(fd, ioctl_h.TIOCGETA(), t);
+            invoker.apply(fd, ioctl_h.TCGETS(), t);
 
             var iflag = termios.c_iflag(t);
             iflag &= ~(ioctl_h.IGNBRK()

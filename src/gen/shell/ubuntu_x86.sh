@@ -1,6 +1,6 @@
     jextract \
         --output src/main/java \
-        --target-package dev.mccue.tui.os.linux.x86 \
+        --target-package dev.mccue.tui.os.linux.amd64 \
         --include-struct termios \
         --include-function ioctl \
         --include-function tcgetattr \
@@ -77,4 +77,4 @@
       	--include-constant VTIME \
       	--include-constant TCGETS \
       	--include-constant TCSETS \
-        headers/ioctl.h
+        src/gen/c/ioctl.h
