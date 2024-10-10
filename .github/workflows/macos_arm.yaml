@@ -5,6 +5,5 @@ jobs:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v3
-      - run: curl -s "https://get.sdkman.io" | bash
-      - run: source "/Users/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x mac_arm.sh && ./mac_arm.sh
+      - run: chmod +x mac_arm.sh && ./mac_arm.sh
       - uses: stefanzweifel/git-auto-commit-action@v4
