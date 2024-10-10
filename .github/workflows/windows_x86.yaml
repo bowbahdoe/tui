@@ -1,18 +1,30 @@
-name: Windows x86
+name: Generate Native Code
 on: workflow_dispatch
 jobs:
-  generate:
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v3
+      - run: curl -s "https://get.sdkman.io" | bash
+      - run: source "/Users/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x mac_arm.sh && ./mac_arm.sh
+      - uses: stefanzweifel/git-auto-commit-action@v4
+
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: curl -s "https://get.sdkman.io" | bash
+      - run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x ubuntu_x86.sh && ./ubuntu_x86.sh
+      - uses: stefanzweifel/git-auto-commit-action@v4
+
+  windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - shell: bash
         run: curl -O "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_windows-x64_bin.tar.gz"
       - shell: bash
-        run: ls
-      - shell: bash
         run: tar -xzvf openjdk-22-jextract+5-33_windows-x64_bin.tar.gz
-      - shell: bash
-        run: ls
       - shell: bash
         run: chmod +x jextract-22/bin/jextract && ./windows_x86.sh
       - shell: bash
