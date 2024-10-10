@@ -10,7 +10,7 @@ jobs:
       - shell: bash
         run: ls
       - shell: bash
-        run: tar -xzvf openjdk-22-jextract+5-33_windows-x64_bin.tar.gz -C jextract
+        run: tar -xzvf openjdk-22-jextract+5-33_windows-x64_bin.tar.gz
       - shell: bash
         run: ls
       
