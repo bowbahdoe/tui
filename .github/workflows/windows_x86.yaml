@@ -6,7 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - shell: bash
-        run: curl --remote-name "jextract.tgz" "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_windows-x64_bin.tar.gz" | bash
-      - shell: bash
-        run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk install jextract 22.ea.5 && chmod +x windows_x86.sh && ./windows_x86.sh
-      - uses: stefanzweifel/git-auto-commit-action@v4
+        run: curl -O "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_windows-x64_bin.tar.gz" | bash
