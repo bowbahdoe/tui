@@ -1,4 +1,4 @@
-jextract \
+./jextract-22/bin/jextract \
         --output src/ \
         --target-package dev.mccue.tui.os.windows.x86 \
         --include-function GetConsoleMode \
