@@ -6,4 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - shell: bash
-        run: curl -O "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_windows-x64_bin.tar.gz" | bash
+        run: curl -O "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_windows-x64_bin.tar.gz"
+      - shell: bash
+        run: ls
+      - shell: bash
+        run: tar -xzvf openjdk-22-jextract+5-33_windows-x64_bin.tar.gz -C jextract
+      - shell: bash
+        run: ls
+      
