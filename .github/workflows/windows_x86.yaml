@@ -15,4 +15,6 @@ jobs:
         run: ls
       - shell: bash
         run: chmod +x jextract-22/bin/jextract && ./windows_x86.sh
+      - shell: bash
+        run: rm -rf openjdk-22-jextract+5-33_windows-x64_bin.tar.gz && rm -rf jextract-22
       
