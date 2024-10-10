@@ -1,4 +1,4 @@
-jextract \
+./jextract-22/bin/jextract \
         --output src/main/java \
         --target-package dev.mccue.tui.terminal.linux.amd64 \
         --include-struct termios \
