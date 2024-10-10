@@ -1,5 +1,5 @@
 name: MacOS ARM
-on: workflow-dispatch
+on: workflow_dispatch
 jobs:
   generate:
     steps:
