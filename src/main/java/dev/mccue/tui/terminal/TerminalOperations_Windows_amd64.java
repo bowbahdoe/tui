@@ -1,6 +1,6 @@
-package dev.mccue.tui;
+package dev.mccue.tui.terminal;
 
-import dev.mccue.tui.os.windows.x86.*;
+import dev.mccue.tui.terminal.windows.amd64.*;
 
 import java.lang.foreign.Arena;
 

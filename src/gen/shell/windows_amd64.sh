@@ -1,6 +1,6 @@
 ./jextract-22/bin/jextract \
         --output src/main/java \
-        --target-package dev.mccue.tui.os.windows.amd64 \
+        --target-package dev.mccue.tui.terminal.windows.amd64 \
         --include-function GetConsoleMode \
         --include-function SetConsoleMode \
         --include-constant ENABLE_ECHO_INPUT \

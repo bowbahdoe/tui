@@ -1,6 +1,6 @@
-    jextract \
+jextract \
         --output src/main/java \
-        --target-package dev.mccue.tui.os.linux.amd64 \
+        --target-package dev.mccue.tui.terminal.mac.aarch64 \
         --include-struct termios \
         --include-function ioctl \
         --include-function tcgetattr \
@@ -54,6 +54,8 @@
         --include-constant ECHOCTL \
         --include-constant ECHOKE \
         --include-constant PENDIN \
+        --include-constant TIOCGETA \
+        --include-constant TIOCSETA \
         --include-constant TCGETS \
         --include-constant TCSETS \
         --include-constant IGNBRK \
@@ -75,6 +77,4 @@
       	--include-constant CS8 \
       	--include-constant VMIN \
       	--include-constant VTIME \
-      	--include-constant TCGETS \
-      	--include-constant TCSETS \
         src/gen/c/ioctl.h

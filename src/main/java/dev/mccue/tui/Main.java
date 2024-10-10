@@ -1,5 +1,7 @@
 package dev.mccue.tui;
 
+import dev.mccue.tui.terminal.Terminal;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 

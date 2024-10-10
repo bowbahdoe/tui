@@ -1,4 +1,4 @@
-package dev.mccue.tui;
+package dev.mccue.tui.terminal;
 
 abstract class TerminalOperations {
     abstract boolean isTerminal(int fd);

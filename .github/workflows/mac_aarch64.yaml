@@ -1,0 +1,16 @@
+name: Mac aarch64
+on: workflow_dispatch
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: curl -O "https://download.java.net/java/early_access/jextract/22/5/openjdk-22-jextract+5-33_macos-aarch64_bin.tar.gz"
+      - shell: bash
+        run: tar -xzvf openjdk-22-jextract+5-33_macos-aarch64_bin.tar.gz
+      - shell: bash
+        run: chmod +x jextract-22/bin/jextract && ./src/gen/shell/windows_aarch64.sh
+      - shell: bash
+        run: rm -rf openjdk-22-jextract+5-33_macos-aarch64_bin.tar.gz && rm -rf jextract-22
+      - uses: stefanzweifel/git-auto-commit-action@v4

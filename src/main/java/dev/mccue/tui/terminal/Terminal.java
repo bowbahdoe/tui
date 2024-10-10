@@ -1,6 +1,6 @@
-package dev.mccue.tui;
+package dev.mccue.tui.terminal;
 
-final class Terminal {
+public final class Terminal {
     private static final TerminalOperations ops;
 
     static {
@@ -21,11 +21,11 @@ final class Terminal {
         }
     }
 
-    static boolean isTerminal(int fd) {
+    public static boolean isTerminal(int fd) {
         return ops.isTerminal(fd);
     }
 
-    static void makeRaw(int fd){
+    public static void makeRaw(int fd){
         ops.makeRaw(fd);
     }
 }
