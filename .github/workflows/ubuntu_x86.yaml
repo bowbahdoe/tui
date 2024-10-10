@@ -1,3 +1,0 @@
-name: Ubuntu x86
-on: workflow_dispatch
-jobs:
