@@ -14,5 +14,5 @@ jobs:
       - shell: bash
         run: ls
       - shell: bash
-        run: chmod +x jextract-22/bin/jextract && ./jextract-22/bin/jextract
+        run: chmod +x jextract-22/bin/jextract && ./windows_x86.sh
       
