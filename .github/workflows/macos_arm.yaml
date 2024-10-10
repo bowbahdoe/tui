@@ -1,0 +1,18 @@
+name: MacOS ARM
+on: workflow-dispatch
+jobs:
+  generate:
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: "23"
+          distribution: "adopt"
+      - uses: sdkman/sdkman-action@v1
+        id: sdkman
+        with:
+          candidate: jextract
+          version: 22.ea.5
+      - run: java --version
+      - run: jextract --version
