@@ -14,4 +14,5 @@
         --include-constant DUPLICATE_SAME_ACCESS \
         --include-function GetStdHandle \
         --include-constant STD_OUTPUT_HANDLE \
+        --include-constant ENABLE_VIRTUAL_TERMINAL_PROCESSING \
         src/gen/c/windows.h
