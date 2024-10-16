@@ -114,6 +114,15 @@ public class windows_h {
     public static int ENABLE_PROCESSED_OUTPUT() {
         return ENABLE_PROCESSED_OUTPUT;
     }
+    private static final int ENABLE_VIRTUAL_TERMINAL_PROCESSING = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * #define ENABLE_VIRTUAL_TERMINAL_PROCESSING 4
+     * }
+     */
+    public static int ENABLE_VIRTUAL_TERMINAL_PROCESSING() {
+        return ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+    }
     /**
      * {@snippet lang=c :
      * typedef void *HANDLE
