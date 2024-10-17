@@ -484,6 +484,15 @@ public class windows_h {
            throw new AssertionError("should not reach here", ex$);
         }
     }
+    private static final MemorySegment INVALID_HANDLE_VALUE = MemorySegment.ofAddress(-1L);
+    /**
+     * {@snippet lang=c :
+     * #define INVALID_HANDLE_VALUE (void*) -1
+     * }
+     */
+    public static MemorySegment INVALID_HANDLE_VALUE() {
+        return INVALID_HANDLE_VALUE;
+    }
     private static final int STD_OUTPUT_HANDLE = (int)4294967285L;
     /**
      * {@snippet lang=c :
